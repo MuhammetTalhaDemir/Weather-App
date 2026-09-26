@@ -17,18 +17,19 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.kampplus.hava.core.ui.theme.HavaTheme
 import com.kampplus.hava.presentation.components.ContentCard
+import com.kampplus.hava.presentation.main.MainUiState
 
 /**
  * Detay ekranı Composable bileşeni.
  *
- * @param cityId Detayı gösterilecek şehrin kimliği/adı
+ * @param uiState Ekran durumu
  * @param onBackClick Geri butonuna basıldığında çalışacak callback
  * @param modifier Dışarıdan uygulanacak Modifier
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DetailScreen(
-    cityId: String,
+    uiState: MainUiState,
     onBackClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
@@ -36,7 +37,7 @@ fun DetailScreen(
         modifier = modifier.fillMaxSize(),
         topBar = {
             TopAppBar(
-                title = { Text(text = "Şehir Detayı") },
+                title = { Text(text = "${uiState.selectedCityName} Detayı") },
                 navigationIcon = {
                     IconButton(onClick = onBackClick) {
                         Icon(
@@ -55,8 +56,8 @@ fun DetailScreen(
                 .padding(16.dp),
         ) {
             ContentCard(
-                title = cityId.replaceFirstChar { it.uppercase() },
-                description = "$cityId şehri için detaylı hava durumu bilgileri burada görüntülenecektir.",
+                title = uiState.selectedCityName,
+                description = uiState.weatherDescription,
             )
         }
     }
@@ -67,7 +68,11 @@ fun DetailScreen(
 private fun DetailScreenPreview() {
     HavaTheme {
         DetailScreen(
-            cityId = "istanbul",
+            uiState = MainUiState(
+                selectedCityId = "istanbul",
+                selectedCityName = "İstanbul",
+                weatherDescription = "Bugün hava parçalı bulutlu, 22°C.",
+            ),
             onBackClick = {},
         )
     }

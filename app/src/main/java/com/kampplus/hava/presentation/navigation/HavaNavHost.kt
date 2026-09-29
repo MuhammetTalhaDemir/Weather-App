@@ -9,9 +9,10 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.toRoute
 import com.kampplus.hava.presentation.detail.DetailScreen
 import com.kampplus.hava.presentation.home.HomeScreen
-import com.kampplus.hava.presentation.main.MainViewModel
+import com.kampplus.hava.presentation.main.WeatherViewModel
 
 /**
  * Uygulama navigasyon yöneticisi ve durum bağlayıcısı.
@@ -24,9 +25,9 @@ import com.kampplus.hava.presentation.main.MainViewModel
 fun HavaNavHost(
     modifier: Modifier = Modifier,
     navController: NavHostController = rememberNavController(),
-    viewModel: MainViewModel = hiltViewModel(),
+    viewModel: WeatherViewModel = hiltViewModel(),
 ) {
-    val uiState by viewModel.uiState.collectAsStateWithLifecycle()
+    val loadState by viewModel.loadState.collectAsStateWithLifecycle()
 
     NavHost(
         navController = navController,
@@ -35,18 +36,25 @@ fun HavaNavHost(
     ) {
         composable<Screen.Home> {
             HomeScreen(
-                uiState = uiState,
+                loadState = loadState,
                 onCityClick = { cityId ->
-                    viewModel.selectCity(cityId)
                     navController.navigate(Screen.Detail(cityId = cityId))
+                },
+                onRetry = {
+                    viewModel.loadData()
                 },
             )
         }
-        composable<Screen.Detail> {
+        composable<Screen.Detail> { backStackEntry ->
+            val detailRoute = backStackEntry.toRoute<Screen.Detail>()
             DetailScreen(
-                uiState = uiState,
+                cityId = detailRoute.cityId,
+                loadState = loadState,
                 onBackClick = {
                     navController.popBackStack()
+                },
+                onRetry = {
+                    viewModel.loadData()
                 },
             )
         }

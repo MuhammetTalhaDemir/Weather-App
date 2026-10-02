@@ -1,3 +1,58 @@
 <resources>
-    <string name="app_name">Hava</string>
+    <string name="app_name">AirV</string>
+    <string name="app_title">AirV Weather</string>
+    <string name="search_hint">Search city&#8230;</string>
+    <string name="favorite_cities_title">FAVORITE CITIES</string>
+    <string name="favorite_cities_empty_prompt">Add your frequently checked cities to Favorites.</string>
+
+    <!-- Weather Metrics -->
+    <string name="metric_apparent">Apparent</string>
+    <string name="metric_humidity">Humidity</string>
+    <string name="metric_wind">Wind</string>
+
+    <!-- Forecast Section Headers -->
+    <string name="section_hourly">Hourly</string>
+    <string name="section_daily">7-Day</string>
+    <string name="day_today">Today</string>
+
+    <!-- Common UI Actions & Messages -->
+    <string name="action_back">Back</string>
+    <string name="action_add_favorite">Add to Favorites</string>
+    <string name="action_remove_favorite">Remove from Favorites</string>
+    <string name="action_retry">Retry</string>
+    <string name="no_search_results">No cities matching your search.</string>
+    <string name="no_results_found">No results found.</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_temp_unit">Temperature Unit</string>
+    <string name="settings_unit_celsius">Celsius (°C)</string>
+    <string name="settings_unit_fahrenheit">Fahrenheit (°F)</string>
+    <string name="settings_wind_unit">Wind Speed Unit</string>
+    <string name="settings_unit_kmh">Kilometers/Hour (km/h)</string>
+    <string name="settings_unit_mph">Miles/Hour (mph)</string>
+    <string name="settings_theme_title">App Theme</string>
+    <string name="settings_theme_system">System Default</string>
+    <string name="settings_theme_light">Light Theme</string>
+    <string name="settings_theme_dark">Dark Theme</string>
+
+    <!-- Errors -->
+    <string name="error_no_internet">No Internet Connection Found</string>
+    <string name="error_server">Server error or service unavailable</string>
+    <string name="error_unknown">Unknown error</string>
+
+    <!-- Weather Descriptions -->
+    <string name="weather_sunny">Clear &amp; Sunny</string>
+    <string name="weather_partly_cloudy">Partly Cloudy</string>
+    <string name="weather_overcast">Overcast</string>
+    <string name="weather_foggy">Foggy</string>
+    <string name="weather_drizzle">Light Drizzle</string>
+    <string name="weather_rainy">Rainy</string>
+    <string name="weather_heavy_rain">Heavy Showers</string>
+    <string name="weather_hail">Hail</string>
+    <string name="weather_snowy">Snowy</string>
+    <string name="weather_stormy">Thunderstorm</string>
+    <string name="temperature_format">Temp: %1$s, %2$s</string>
+    <string name="temp_prefix">Temp: </string>
+    <string name="country_turkey_suffix">Turkey</string>
 </resources>

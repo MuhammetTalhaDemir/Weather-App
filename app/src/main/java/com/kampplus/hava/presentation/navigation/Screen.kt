@@ -11,4 +11,7 @@ sealed interface Screen {
 
     @Serializable
     data class Detail(val cityId: String) : Screen
+
+    @Serializable
+    data object Settings : Screen
 }

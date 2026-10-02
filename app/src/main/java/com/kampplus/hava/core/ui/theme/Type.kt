@@ -5,8 +5,8 @@ import androidx.compose.ui.text.font.FontWeight
 
 private val base = Typography()
 
-internal val HavaTypography = base.copy(
+val HavaTypography = base.copy(
     titleLarge = base.titleLarge.copy(fontWeight = FontWeight.SemiBold),
     titleMedium = base.titleMedium.copy(fontWeight = FontWeight.SemiBold),
-    labelLarge = base.labelLarge.copy(fontWeight = FontWeight.Bold)
+    labelLarge = base.labelLarge.copy(fontWeight = FontWeight.Bold),
 )

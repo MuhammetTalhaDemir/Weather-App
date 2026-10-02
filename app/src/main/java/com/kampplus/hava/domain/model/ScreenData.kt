@@ -5,4 +5,6 @@ package com.kampplus.hava.domain.model
  */
 data class ScreenData(
     val cities: List<CityItem> = emptyList(),
+    val favoriteCities: List<CityItem> = emptyList(),
+    val cityDetails: Map<String, CityDetailData> = emptyMap(),
 )

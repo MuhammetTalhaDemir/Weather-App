@@ -5,6 +5,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import com.kampplus.hava.domain.model.AppThemeMode
 
 private val LightColors = lightColorScheme(
     primary = Teal40,
@@ -20,7 +21,7 @@ private val LightColors = lightColorScheme(
     surfaceVariant = NeutralVariant90,
     onSurfaceVariant = NeutralVariant30,
     surfaceContainer = Neutral95,
-    error = Red40
+    error = Red40,
 )
 
 private val DarkColors = darkColorScheme(
@@ -34,14 +35,23 @@ private val DarkColors = darkColorScheme(
     surface = Neutral10,
     onSurface = Neutral90,
     onSurfaceVariant = NeutralVariant90,
-    error = Red80
+    error = Red80,
 )
 
 @Composable
-fun HavaTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
+fun HavaTheme(
+    themeMode: AppThemeMode = AppThemeMode.SYSTEM,
+    content: @Composable () -> Unit,
+) {
+    val darkTheme = when (themeMode) {
+        AppThemeMode.SYSTEM -> isSystemInDarkTheme()
+        AppThemeMode.LIGHT -> false
+        AppThemeMode.DARK -> true
+    }
+
     MaterialTheme(
         colorScheme = if (darkTheme) DarkColors else LightColors,
         typography = HavaTypography,
-        content = content
+        content = content,
     )
 }

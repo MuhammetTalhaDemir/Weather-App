@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">AirV</string>
+    <string name="app_title">AirV Hava Durumu</string>
+    <string name="search_hint">Şehir ara&#8230;</string>
+    <string name="favorite_cities_title">FAVORİ ŞEHİRLER</string>
+    <string name="favorite_cities_empty_prompt">Sıkça baktığınız şehirleri Favorilere ekleyin.</string>
+
+    <!-- Weather Metrics -->
+    <string name="metric_apparent">Hissedilen</string>
+    <string name="metric_humidity">Nem</string>
+    <string name="metric_wind">Rüzgâr</string>
+
+    <!-- Forecast Section Headers -->
+    <string name="section_hourly">Saatlik</string>
+    <string name="section_daily">7 Günlük</string>
+    <string name="day_today">Bugün</string>
+
+    <!-- Common UI Actions & Messages -->
+    <string name="action_back">Geri</string>
+    <string name="action_add_favorite">Favorilere Ekle</string>
+    <string name="action_remove_favorite">Favorilerden Çıkar</string>
+    <string name="action_retry">Tekrar Dene</string>
+    <string name="no_search_results">Aramanızla eşleşen şehir bulunamadı.</string>
+    <string name="no_results_found">Sonuç bulunamadı.</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">Ayarlar</string>
+    <string name="settings_temp_unit">Sıcaklık Birimi</string>
+    <string name="settings_unit_celsius">Celsius (°C)</string>
+    <string name="settings_unit_fahrenheit">Fahrenheit (°F)</string>
+    <string name="settings_wind_unit">Rüzgâr Hızı Birimi</string>
+    <string name="settings_unit_kmh">Kilometre/Saat (km/sa)</string>
+    <string name="settings_unit_mph">Mil/Saat (mph)</string>
+    <string name="settings_theme_title">Uygulama Teması</string>
+    <string name="settings_theme_system">Sistem Varsayılanı</string>
+    <string name="settings_theme_light">Aydınlık Tema</string>
+    <string name="settings_theme_dark">Karanlık Tema</string>
+
+    <!-- Errors -->
+    <string name="error_no_internet">İnternet Bağlantısı Bulunamadı</string>
+    <string name="error_server">Sunucu hatası veya servis ulaşılamıyor</string>
+    <string name="error_unknown">Bilinmeyen hata</string>
+
+    <!-- Weather Descriptions -->
+    <string name="weather_sunny">Açık ve Güneşli</string>
+    <string name="weather_partly_cloudy">Parçalı Bulutlu</string>
+    <string name="weather_overcast">Çok Bulutlu</string>
+    <string name="weather_foggy">Sisli</string>
+    <string name="weather_drizzle">Çiseleyen Yağmur</string>
+    <string name="weather_rainy">Yağmurlu</string>
+    <string name="weather_heavy_rain">Sağanak Yağmurlu</string>
+    <string name="weather_hail">Dolu Yağışlı</string>
+    <string name="weather_snowy">Kar Yağışlı</string>
+    <string name="weather_stormy">Gökgürültülü Fırtına</string>
+    <string name="temperature_format">Sıcaklık: %1$s, %2$s</string>
+    <string name="temp_prefix">Sıcaklık: </string>
+    <string name="country_turkey_suffix">Türkiye</string>
+</resources>

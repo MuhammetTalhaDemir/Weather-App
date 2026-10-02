@@ -9,4 +9,8 @@ data class CityItem(
     val description: String,
     val latitude: Double,
     val longitude: Double,
+    val weatherCode: Int? = null,
+    val isDay: Boolean = true,
+    val isWorldCity: Boolean = false,
+    val isFavorite: Boolean = false,
 )

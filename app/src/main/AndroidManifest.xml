@@ -4,9 +4,10 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:icon="@android:drawable/sym_def_app_icon"
         android:name=".HavaApplication"
         android:allowBackup="true"
+        android:icon="@drawable/ic_launcher_airv"
+        android:roundIcon="@drawable/ic_launcher_airv"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.Hava">

@@ -1,6 +1,6 @@
 package com.kampplus.hava.domain.repository
 
-import com.kampplus.hava.domain.model.CityItem
+import com.kampplus.hava.domain.model.CityDetailData
 import com.kampplus.hava.domain.model.ScreenData
 
 /**
@@ -8,5 +8,5 @@ import com.kampplus.hava.domain.model.ScreenData
  */
 interface WeatherRepository {
     suspend fun getWeatherForCities(): ScreenData
-    suspend fun getWeatherForCity(cityId: String): CityItem?
+    suspend fun getWeatherForCity(cityId: String): CityDetailData?
 }
